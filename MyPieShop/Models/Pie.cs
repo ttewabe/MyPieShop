@@ -5,8 +5,8 @@
         internal bool InStock;
         internal bool IsPieOfTheWeek;
 
-        public int PieId { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public int PieId { get; set; } // added Id
+        public string Name { get; set; } = string.Empty; // added Name
         public string? ShortDescription { get; set; }
         public string? LongDescription { get; set; }
         public string? AlleryInformation { get; set; }
