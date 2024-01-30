@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyPieShop.Models;
+using MyPieShop.ViewModels;
 
 namespace MyPieShop.Controllers
 {
@@ -18,8 +19,11 @@ namespace MyPieShop.Controllers
         // Create action method
         public ActionResult List()
         {
-            ViewBag.CurrentCategory = "Cheese cakes";
-            return View(_pieRepository.AllPies);
+            // ViewBag.CurrentCategory = "Cheese cakes";
+            // return View(_pieRepository.AllPies);
+            PieListViewModel piesListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese cakes");
+
+            return View(piesListViewModel);
 
         }
     }
